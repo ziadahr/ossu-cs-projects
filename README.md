@@ -1,36 +1,33 @@
 # OSSU CS Projects
- 
-Projects I built while working through the [OSSU Computer Science](https://github.com/ossu/computer-science) curriculum — a free, self-taught CS education equivalent to an undergraduate degree, using materials from MIT, Harvard, UBC, and other world-class universities.
- 
+
+This repository is my personal log of the work I complete while going through the [OSSU Computer Science curriculum](https://github.com/ossu/computer-science).
+
+It contains two main things:
+
+* **Weekly logs** — notes and updates about what I studied and worked on each week.
+* **Course projects** — projects and practical work I build as part of each course.
+
+The purpose of this repository is simply to keep a record of my progress and the projects I complete throughout my CS journey.
+
 ---
- 
+
 ## Structure
- 
-```
+
+```text
 ossu-cs-projects/
-├── 01-python-mit-6100l/              ← Intro CS
-└── 02-spd-systematic-program-design/ ← Core CS
+├── cs-journey-log/   # Weekly learning logs
+├── projects/         # Projects from the courses
+└── README.md
 ```
- 
+
 ---
- 
-## Courses
- 
-| # | Course | University | Status |
-|---|---|---|---|
-| 01 | [Introduction to CS and Programming Using Python](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/) | MIT | ✅ Completed |
-| 02 | [Systematic Program Design](https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015) | UBC | In progress |
- 
+
+## About
+
+This is a personal learning repository. The content will grow as I progress through the OSSU curriculum, with new weekly logs and projects added along the way.
+
+[OSSU Computer Science](https://github.com/ossu/computer-science) is the curriculum I am following for my self-study journey.
+
 ---
- 
-## About OSSU
- 
-The [OSSU curriculum](https://github.com/ossu/computer-science) is a complete CS education using free online materials. It covers:
- 
-- **Intro CS** — First steps into programming and computer science
-- **Core CS** — Equivalent to the first three years of a CS degree
-- **Advanced CS** — Electives based on interest
-- **Final Project** — A capstone to validate everything learned
----
- 
-*Updated as each course is completed.*
+
+*Updated throughout my CS journey.*
