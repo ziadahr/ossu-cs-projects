@@ -1,4 +1,4 @@
-# OSSU CS Projects
+# Projects
 
 Projects I build while working through the [OSSU Computer Science](https://github.com/ossu/computer-science) curriculum.
 
