@@ -4,9 +4,10 @@ Projects built while working through the [Systematic Program Design](https://www
 
 ## Projects
 
-| # | Project | Status |
-|---|---|---|
-| 01 | Space Invaders | In progress |
+| #  | Project                              | Status         |
+| -- | ------------------------------------ | -------------- |
+| 01 | [Space Invaders](01-space-invaders/) | ✅ Completed |
 
 ## Course
+
 Part of my [OSSU Computer Science](https://github.com/ossu/computer-science) journey.
