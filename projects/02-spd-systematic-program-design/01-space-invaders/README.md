@@ -1,49 +1,55 @@
 # Space Invaders
 
-A fully playable Space Invaders game built in **ISL (Intermediate Student Language)** using DrRacket's `big-bang` library, as part of the Systematic Program Design course.
+A fully playable **Space Invaders** game built in **ISL (Intermediate Student Language)** using DrRacket's `big-bang` library, as part of the **Systematic Program Design** course.
 
 ## How to Play
 
-Open `space-invaders.rkt` in DrRacket and run `(main (make-game empty empty T0))` in the interactions area.
+Open `space-invaders.rkt` in DrRacket and run:
 
-| Key | Action |
-|---|---|
-| `→` | Move tank right |
-| `←` | Move tank left |
-| `Space` | Fire missile |
-
-Invaders spawn randomly from the top and move diagonally. Shoot them before they reach the ground — if any invader lands, game over.
-
-## What It Covers
-
-| Concept | Where |
-|---|---|
-| HtDW (How to Design Worlds) | `main`, `next-game`, `render-game`, `handle-game` |
-| Compound data | `Game`, `Invader`, `Missile`, `Tank` — all `define-struct` |
-| Self-reference | `ListOfInvader`, `ListOfMissile` |
-| Reference rule + natural helpers | `render-loi` → `render-invader`, `render-lom` → `render-missile` |
-| Function composition | `render-war` composes `render-loi`, `render-lom`, `render-tank` |
-| Mutual list processing | `lom-hit-loi`, `loi-hit-lom` — two lists working together |
-| Helper functions | `hit?`, `hitground?`, `offscreen?`, `handle-cases` |
-
-## Structure
-
+```racket
+(main (make-game empty empty T0))
 ```
+
+| Key     | Action          |
+| ------- | --------------- |
+| `→`     | Move tank right |
+| `←`     | Move tank left  |
+| `Space` | Fire missile    |
+
+Invaders spawn randomly from the top and move diagonally across the screen. Shoot them before they reach the ground. If an invader reaches the bottom, the game is over.
+
+## Concepts
+
+| Concept                     | Used in                                            |
+| --------------------------- | -------------------------------------------------- |
+| How to Design Worlds (HtDW) | `main`, `next-game`, `render-game`, `handle-game`  |
+| Compound data               | `Game`, `Invader`, `Missile`, `Tank`               |
+| Self-referential data       | `ListOfInvader`, `ListOfMissile`                   |
+| Function composition        | `render-war`                                       |
+| Recursive list processing   | Movement, rendering, collision detection           |
+| Helper functions            | `hit?`, `hitground?`, `offscreen?`, `handle-cases` |
+| Event handling              | Keyboard input and clock ticks                     |
+
+## Game Structure
+
+```text
 Game
-├── ListOfInvader  → Invader (x, y, dx)
-├── ListOfMissile  → Missile (x, y)
-└── Tank           (x, dir)
+├── ListOfInvader → Invader (x, y, dx)
+├── ListOfMissile → Missile (x, y)
+└── Tank          → Tank (x, dir)
 ```
 
-Every tick:
-1. Invaders move diagonally, bounce off walls, randomly spawn new ones
-2. Missiles move upward, removed when off-screen
-3. Tank moves based on key input
-4. Hit detection removes colliding missiles and invaders
-5. Game ends when any invader reaches the bottom
+Each game tick:
+
+1. Invaders move, bounce off the walls, and may spawn.
+2. Missiles move upward and are removed when they leave the screen.
+3. The tank responds to keyboard input.
+4. Collisions remove missiles and invaders.
+5. The game ends when an invader reaches the ground.
 
 ## Course
 
 [Systematic Program Design](https://www.edx.org/learn/coding/university-of-british-columbia-how-to-code-simple-data) — University of British Columbia (via edX)
 
 Part of my [OSSU Computer Science](https://github.com/ossu/computer-science) journey.
+
